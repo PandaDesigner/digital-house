@@ -188,8 +188,21 @@ section {
 
 @media only screen and (max-width: 768px) {
   .nav-list {
-    display: none;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 160px;
+    height: 220px;
+    background-color: #120a1360;
+    flex-direction: column;
+    padding: 25px;
+    transition: all 0.5s ease-in-out;
   }
+
+  #menu-toggle:checked + label.menu-icon-action + ul {
+    right: 4%;
+  }
+
   .menu-icon-action,
   #menu-icon {
     display: block;
